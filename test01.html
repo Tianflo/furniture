@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+  <input type="text" name="" id="sname">
+  <p></p>
+  <input type="password" name="" id="passward">
+  <p></p>
+  <button id="check">验证</button>
+  <button id="btn">提交</button>
+</body>
+<script type="text/javascript">
+	var check=document.getElementById("check");
+	var username = document.getElementById("username")
+	var p = document.getElementsByTagName("p");
+	btn.onclick=function(){
+		var xhr = new XMLHttpRequest();
+		xhr.open("post","insert.php");
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				p[0].innerHTML=xhr.responseText;
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	
+		xhr.send("username="+username.value+"&passward="+passward.value);
+	}
+	sname.onblur=function(){
+		var xhr = new XMLHttpRequest();
+		xhr.open("post","judge.php");
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				p[0].innerHTML=xhr.responseText;
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	
+		xhr.send("username="+sname.value);
+	}
+    check.onclick=function(){
+    	var xhr = new XMLHttpRequest();
+		xhr.open("post","check.php");
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				p[1].innerHTML=xhr.responseText;
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	
+		xhr.send("username="+sname.value+"&passward="+passward.value);
+    }
+</script>
+</html>

@@ -1,0 +1,104 @@
+html,body,p,ul,li,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+img{
+    vertical-align: middle;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+#header{
+    display: flex;
+    .second_nav{
+        padding-top: 27px;
+    }
+}
+.content{
+    padding-bottom: 50px;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: black;
+    a{
+        color: black;
+    }
+}
+.main_1{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .main_1_1{
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        margin-top: 30px;
+        img{
+            width: 300px;
+            height: 280px;
+        }
+        p{
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+            color: #5a5657;
+            padding-top: 30px;
+            text-shadow:0 0 0 #5a5657;
+        }
+        .write1{
+            padding-top: 30px;
+            width: 676px;
+            display: block;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #5a5657;
+        }
+        div{
+            padding: 20px 0 20px 70px; 
+            img{
+                width: 26px;
+                height: 16px;
+                // float: right;
+            }
+        }
+    }
+}
+@keyframes text-shadow{
+	from{
+        text-shadow:0 0 0 black;
+    }
+	to{
+        text-shadow:0 0 10px black;
+    }
+}
+
+
+.mask{
+    -webkit-mask : -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.5)));
+}
+.mask1{
+    -webkit-mask : -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.5)), to(rgba(0,0,0,0)));
+}
+.mask2{
+    -webkit-mask : -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0)));
+}
+.but{
+    border: 1px solid red;
+    position: fixed;
+    left: 50%;
+    background: #fff;
+    bottom: 50px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: red;
+    text-align: center;
+}
